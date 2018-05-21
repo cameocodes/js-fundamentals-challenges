@@ -17,5 +17,5 @@ Array.prototype.fillyFilter = function(callback){
   
   myArray.fillyFilter(function(item){
     if (item > 2)
-    console.log(item);
+    return item;
   })

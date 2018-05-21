@@ -9,16 +9,14 @@
 // variable to screen it should produce [ 4, 8, 12 ].
 
 function arrayMultiply(x, y, arr, funct){
-    const args = x * y
-    return funct(arr, args)
+    const multiplier = x * y
+    return funct(arr, multiplier)
   }
   
-  const results = arrayMultiply(2, 2, [1,2,3], function(arr, args){
+  const results = arrayMultiply(2, 2, [1,2,3], function(arr, multiplier){
      const multiplied = [];
      arr.forEach(function(item){
-       multiplied.push(item * args);
+       multiplied.push(item * multiplier);
      })
      return multiplied;
   })
-  
-  console.log(results)

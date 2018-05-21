@@ -16,5 +16,5 @@ Array.prototype.mappyMap = function(callback){
   const myArray = [1,3,5];
   
   myArray.mappyMap(function(num){
-    console.log(num * 5);
+    return num * 5;
   })

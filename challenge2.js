@@ -15,18 +15,16 @@
 
 
 function arrayMultiplyAgain(num, arr){
-    const inputArray = arr;
-    const inputNum = num;
-    const results = [];
-    inputArray.forEach(function(item, i){
-      results.push(item * num);
-    })
-    console.log(results);
-    return results;
-  }
-  
-  function moreArrayMultiply(num, arr, funct){
-    const store = funct(num, arr);
-  }
-  
-  moreArrayMultiply(2, [1,2,3], arrayMultiplyAgain);
+  const results = [];
+  arr.forEach(function(item, i){
+    results.push(item * num);
+  })
+  return results;
+}
+
+function moreArrayMultiply(num, arr, funct){
+  const store = funct(num, arr);
+  return store;
+}
+
+moreArrayMultiply(2, [1,2,3], arrayMultiplyAgain);
