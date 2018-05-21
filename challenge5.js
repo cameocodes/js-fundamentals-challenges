@@ -14,22 +14,17 @@
 // to get the string to display to the screen. 
 
 const buyOrSell = {
-    buy: function(){
-      return "I want to buy!";
-    },
-    sell: function(){
-      return "I want to get out!"
-    }
+  buy: buy => "I want to buy!",
+  sell: sell => "I want to get out!"
+}
+
+function originalFunction(num, functionObject){
+  if(num % 2 == 0){
+    return functionObject.buy();
+  } else {
+    return functionObject.sell();
   }
-  
-  function originalFunction(num, functionObject){
-    if(num/2){
-      return functionObject.buy();
-    } else {
-      return functionObject.sell();
-    }
-  }
-  
-  
-  const results = originalFunction(5, buyOrSell)
-  console.log(results)
+}
+
+
+const results = originalFunction(4, buyOrSell)

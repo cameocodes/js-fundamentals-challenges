@@ -15,16 +15,11 @@
 
 
 function arrayMultiplyAgain(num, arr){
-  const results = [];
-  arr.forEach(function(item, i){
-    results.push(item * num);
-  })
-  return results;
+  return arr.map(x => x * num)
 }
 
 function moreArrayMultiply(num, arr, funct){
-  const store = funct(num, arr);
-  return store;
+  return funct(num, arr);
 }
 
 moreArrayMultiply(2, [1,2,3], arrayMultiplyAgain);
